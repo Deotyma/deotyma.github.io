@@ -1,0 +1,349 @@
+/* general css */
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-color: #212738;
+    color: #212738;
+    font-family: 'Lato';
+}
+
+h1 {
+    font-family: 'Faustina';
+}
+
+
+/* css nav */
+
+header {
+    background: #212738;
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    top: 0;
+}
+
+.nav-toggle {
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+.nav-toggle:focus~.nav-toggle-label {
+    outline: 3px solid rgba(lightblue, .75);
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: #edf2ef;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: #212738;
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: #f97068;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+    color: #57c4e5;
+}
+
+.nav-toggle:checked~nav {
+    transform: scale(1, 1);
+}
+
+.nav-toggle:checked~nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+h1 a {
+    font-family: 'Faustina';
+    color: #57c4e5;
+    text-decoration: none;
+}
+
+
+/* main css */
+
+main {
+    text-align: center;
+}
+
+.titre {
+    font-size: 3rem;
+    margin-top: 7rem;
+}
+
+.description {
+    font-size: 1rem;
+}
+
+#slide1,
+#slide2,
+#slide3,
+#slide4,
+#slide5 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+#slide1 {
+    background-image: url('../img/office.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    z-index: -1;
+}
+
+article {
+    font-size: 1.5rem;
+    color: #57c4e5;
+}
+
+article h2 {
+    color: #f97068;
+}
+
+.desc {
+    color: #f97068;
+    font-family: 'Faustina' cursive;
+    text-transform: uppercase;
+}
+
+#slide3,
+#slide5 {
+    background-color: #f97068;
+    font-size: 2rem;
+}
+
+.comp {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-center;
+    align-content: space-around;
+}
+
+.icone,
+.icon {
+    flex-basis: 48%;
+    padding: 1rem;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.icone:hover,
+.icon:hover {
+    animation: bounce 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#slide4 h2 {
+    color: #f97068;
+}
+
+#slide4 {
+    color: #57c4e5;
+    font-size: 2rem;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.text a {
+    color: #f97068;
+    pointer-events: visiblePainted;
+}
+
+.image img {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+span a {
+    color: #212738;
+}
+
+footer {
+    color: #f97068;
+}
+
+
+/* css mediaquery */
+
+@media screen and (min-width: 800px) {
+    .container {
+        width: 80%;
+    }
+    /* css nav */
+    .nav-toggle-label {
+        display: none;
+    }
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    }
+    .logo {
+        grid-column: 2 / 3;
+        color: #57c4e5;
+        font-family: 'Faustina';
+    }
+    nav {
+        position: relative;
+        text-align: left;
+        transition: none;
+        transform: scale(1, 1);
+        background: none;
+        top: initial;
+        left: initial;
+        /* end Edge support stuff */
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav ul {
+        display: flex;
+    }
+    nav li {
+        margin-left: 3rem;
+        margin-bottom: 0;
+    }
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        background: #57c4e5;
+        position: absolute;
+        top: -.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+    nav a:hover::before {
+        transform: scale(1, 1);
+    }
+    /* main css */
+    .titre {
+        font-size: 9rem;
+    }
+    .description {
+        font-size: 3rem;
+    }
+    #slide1,
+    #slide2,
+    #slide3,
+    #slide5 {
+        /* height: 100vh; */
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    article {
+        font-size: 3rem;
+    }
+    #slide3 {
+        font-size: 3rem;
+    }
+    .icone {
+        flex-basis: 30%;
+        padding: 2rem;
+    }
+    .icon {
+        padding: 2rem;
+    }
+    .text {
+        flex-basis: 48%;
+    }
+    .image {
+        flex-basis: 48%;
+    }
+}
