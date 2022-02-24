@@ -180,6 +180,7 @@ article h2 {
 #slide5 {
     background-color: #f97068;
     font-size: 2rem;
+
 }
 
 .comp {
@@ -242,6 +243,34 @@ article h2 {
     overflow: hidden;
     width: 100%;
     height: auto;
+}
+
+input, textarea{
+    display: flex;
+    flex-direction: column;
+    background-color: #212738;
+    color: #57c4e5;
+    margin: auto;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-radius: 30px;
+    width: 90vw;
+}
+textarea{
+    height:200px
+}
+
+button{
+    background-color: #212738;
+    color: #57c4e5;
+    padding: 1rem;
+    border-radius: 30px;
+}
+
+button:hover{
+    background-color: #f97068;
+    color: #212738;
+    border: solid 5px #212738;
 }
 
 span a {
@@ -345,5 +374,8 @@ footer {
     }
     .image {
         flex-basis: 48%;
+    }
+    input, textarea{
+        width: 50vw;
     }
 }
