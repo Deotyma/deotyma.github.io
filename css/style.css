@@ -191,9 +191,13 @@ article h2 {
     align-content: space-around;
 }
 
-.icone,
-.icon {
+.icone{
     flex-basis: 48%;
+    padding: 1rem;
+}
+
+.icon{
+    flex-basis: 33%;
     padding: 1rem;
 }
 
