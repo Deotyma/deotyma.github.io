@@ -1,0 +1,34 @@
+ :root { --bg:#0b0f10; --fg:#c2f0c2; --accent:#33ff33; --muted:#7f9f7f; --danger:#ff6b6b; --link:#8be9fd; }
+    [data-theme="amber"] { --bg:#0b0a07; --fg:#ffe7b3; --accent:#ffc107; --muted:#c5a86a; --danger:#ff9e80; --link:#ffd54f; }
+    [data-theme="mono"] { --bg:#0e0e0e; --fg:#e0e0e0; --accent:#e0e0e0; --muted:#a0a0a0; --danger:#f19696; --link:#e0e0e0; }
+
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 920px; margin: 0 auto; padding: 16px; }
+
+    #terminal { min-height: 80vh; white-space: pre-wrap; word-break: break-word; }
+    .line { display: grid; grid-template-columns: auto 1fr; column-gap: 8px; align-items: baseline; }
+    .prompt { color: var(--accent); }
+    .input { width: 100%; background: transparent; border: 0; color: var(--fg); font: inherit; outline: none; caret-color: var(--accent); }
+    .muted { color: var(--muted); }
+    .danger { color: var(--danger); }
+    a { color: var(--link); text-decoration: none; border-bottom: 1px dotted var(--link); }
+    a:hover { text-decoration: underline; }
+    .blink { animation: blink 1s step-end infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    .screen-reader-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .header { color: var(--muted); margin-bottom: 12px; }
+    .footer { margin-top: 20px; color: var(--muted); font-size: 0.9em; }
+    .tag { display:inline-block; padding:2px 6px; border:1px solid var(--muted); border-radius:6px; margin:2px 6px 2px 0; }
+    .kbd { display:inline-block; padding:1px 6px; border-radius:4px; border:1px solid var(--muted); margin-left:4px; }
+
+    /* Reduced motion respect */
+    @media (prefers-reduced-motion: reduce) { .blink { animation: none; } }

@@ -1,174 +1,23 @@
-<!DOCTYPE html>
-<html lang="fr">
-
+<!doctype html>
+<html lang="fr" data-theme="green">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-    <link href='https://fonts.googleapis.com/css?family=Faustina' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <title>Ewa Kadziolka</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV — Terminal Linux</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  <meta name="description" content="CV interactif façon terminal Linux" />
+  
 </head>
-
 <body>
-    <header>
-        <h1 class="logo"><a href="#slide1">EK</a></h1>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <nav>
-            <ul>
-                <li><a href="#slide2">Bonjour</a></li>
-                <li><a href="#slide3">Competnces</a></li>
-                <li><a href="#slide4">Portfolio</a></li>
-                <li><a href="">Articles</a></li>
-                <li><a href="#slide5">Contact</a></li>
-            </ul>
-        </nav>
-        <label for="nav-toggle" class="nav-toggle-label">
-          <span></span>
-        </label>
-    </header>
-    <main>
-
-        <section id="slide1">
-            <div class="container">
-                <div class="titres">
-                    <h1 class="titre animate__animated animate__bounceInDown">Ewa <br> Kadziolka</h1>
-                    <p class="description">Développeuse web et mobile</p>
-                </div>
-            </div>
-        </section>
-        <section id="slide2">
-            <div class="container">
-                <article>
-                    <h2>Bonjour</h2>
-                    <p>Je m’appelle <span class="desc">Ewa</span> Kadziolka.</p>
-                    <p>Toujours curieuse et assoiffée des nouveaux <span class="desc">défis</span>, j’ai décidé d’apprendre à programmer.</p>
-                    <p>Vite la programmation est devenue ma <span class="desc">passion</span>. </p>
-                    <p>Je suis très intéressée par <span class="desc">green IT</span> et <span class="desc">tech for good</span>. </p>
-                </article>
-            </div>
-        </section>
-        <section id="slide3">
-            <div class="container ">
-                <h2>Mes competences</h2>
-                <div class="comp">
-                    <span class="icone"><i class="fab fa-html5"></i><br> <strong>HTML</strong></span>
-                    <span class="icone"><i class="fab fa-css3-alt"></i><br> <strong>CSS</strong></span>
-                    <span class="icone"><i class="fab fa-js"></i><br> <strong>JS</strong></span>
-                    <span class="icone"><i class="fab fa-react"></i><br> <strong>React.js</strong></span>
-                    <span class="icone"><i class="fab fa-svelte-js"></i><br> <strong>Svelte.js</strong></span>
-                    <span class="icone"><i class="fab fa-node-js"></i><br> <strong>Node.js</strong></span>
-                    <span class="icone"><i class="fab fa-python"></i><br> <strong>Python</strong></span>
-                    <span class="icone"><i class="fab fa-git-alt"></i><br> <strong>GIT</strong></span>
-                    <span class="icone"><i class="fas fa-database"></i><br><strong>MySql</strong></span>
-                </div>
-            </div>
-
-            </div>
-        </section>
-        <section id="slide4">
-            <div class="container">
-                <h2>Portfolio</h2>
-                <div class="portfolio">
-                    <article class="text">
-                        <h3>Joseph Watch - E-commerce</h3>
-                        <p>Voici le site que j'ai réalisé avec mon equipe, dans le cadre de la fin de formation <strong>WebForce3</strong> pour optenir le certificat de développeuse web et mobile> </p>
-                        <p>Les technologies utilisées:<br> - <strong>HTML, CSS, Bootstrap</strong><br> - <strong>PHP, Symfony</strong>
-                        </p>
-                        <a href="https://github.com/Leila-echchabi/e-commerce" target="_blank">Code source</a><br>
-                        <a href="https://youtu.be/3fSDoNwNb8Q" target="_blank">video</a>
-                    </article>
-
-                    <article class="image">
-                        <img src="img/josephWatch.png" alt="page d'acceuil de Joseph Watch">
-                    </article>
-
-                    <article class="image">
-                        <img src="img/iToubib.png" alt="page d'acceuil de Joseph Watch">
-                    </article>
-
-                    <article class="text">
-                        <h3>I-Toubib</h3>
-                        <p>Ce site j’ai réalisé avec mon équipe pendant la formation à <strong>Konexio</strong>. C’est un site de prise de rdv médicale pour Libye. Pour le front nous avons utilisé <strong>React.js</strong> et pour le backend est fait en utilisant <strong>Node.js</strong> et <strong>MongoDB</strong>.
-                        </p>
-                        <a href="https://github.com/Deotyma/IToubib" target="_blank">Code source</a><br>
-                        <a href="https://youtu.be/v12p23eKRl8" target="_blank">video</a>
-                    </article>
-
-                    <article class="text">
-                        <h3>Iroco</h3>
-                        <p>Pendant mon stage à <strong>Iroco</strong> un startup chargé de créer un messagerie respectueuse de l’environnement et des données des usagers. J’ai participé à la benchmark entre <strong>React</strong>, <srong>Vue</srong> et <strong>Svelte</strong> pour choisir la technologie la plus écologique et ensuite j’ai crée les pages login et signup avec  <strong>Svelte</strong> testant le code avec  <strong>Jest</strong>.</p>
-                        
-                        <a href="https://app.iroco.co/signup/" target="_blank">Iroco</a>
-                    </article>
-
-                    <article class="image">
-                        <img src="img/iroco.png" alt="page d'acceuil de Joseph Watch">
-                    </article>
-
-                    <article class="image">
-                        <img src="img/argonautes.jpeg" alt="page d'acceuil des argonautes">
-                    </article>
-
-                    <article class="text">
-                        <h3>Argonautes</h3>
-                        <p>C'est un petite application CRUD où on peut embarquer à l'avanture de Jason. Pour le front nous avons utilisé <strong>Svelte.js</strong> et pour le backend est fait en utilisant <strong>Node.js</strong> avec <strong>Fastify</strong> et <strong>MongoDB</strong>.
-                        </p>
-                        <a href="https://github.com/Deotyma/argonautes_front_svelte" target="_blank">Code source front</a><br>
-                        <a href="https://github.com/Deotyma/argonautes-back" target="_blank">Code source back</a><br>
-                    </article>
-
-
-                    <article class="text">
-                        <h3>Image Transformer</h3>
-                        <p> C'est une application pour modifier les images. Pour écrire cette application j'ai utilisé <strong>Python</strong> avec <strong>Tkinter </strong> et <strong>Pillow</strong></p>
-                        
-                        <a href="https://github.com/Deotyma/imagePython" target="_blank">Code source</a><br>
-                        <a href="https://youtu.be/Ylhy_lTq5h0" target="_blank">Video</a>
-                    </article>
-
-                    <article class="image">
-                        <img src="img/imageT.png" alt="interface de image">
-                    </article>
-
-
-
-
-                </div>
-            </div>
-        </section>
-        <section id="slide5">
-            <div class="container">
-                <h2>Contact</h2>
-                <h3>N'hesitez pas à me contacter</h3>
-
-                <form action="https://formsubmit.co/kalistaewa@gmail.com" method="POST">
-                    <input type="email" name="email" placeholder="votre email" required>
-                    <textarea type="text" name="name" placeholder="votre message..." required></textarea>
-                    <input type="hidden" name="_next" value="https://deotyma.github.io/thanks.html">
-                    <button type="submit">Envoyer</button>
-               </form>
-
-                <div class="comp">
-                    <span class="icon"><a href="https://github.com/Deotyma" target="_blanc"><i class="fab fa-github-square"></i><br>github</a></span>
-                    <span class="icon"><a href="https://twitter.com/deotyma_dev" target="_blanc"><i class="fab fa-twitter-square"></i><br>twitter</a></span>
-                    <span class="icon"><a href="https://www.linkedin.com/in/ewabarbarakadziolka/"target="_blanc"><i class="fab fa-linkedin"target="_blanc"></i><br>linkedin</a></span>
-
-                </div>
-
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-            <p>Deotyma A.D.2022</p>
-        </div>
-    </footer>
+  <div class="container" role="application" aria-label="Terminal CV interactif">
+    <p class="header">Tape <span class="tag">help</span> pour voir les commandes. Appuie sur <span class="kbd">↑</span>/<span class="kbd">↓</span> pour l'historique et <span class="kbd">Tab</span> pour l'auto-complétion.</p>
+    <div id="terminal"></div>
+    <div class="line" id="input-line" aria-live="polite">
+      <span class="prompt" id="prompt">dev@stationf:~$</span>
+      <input id="cmd" class="input" aria-label="Entrer une commande" autocomplete="off" spellcheck="false" placeholder="help" />
+    </div>
+    <p class="footer">Thèmes: <span class="tag">theme green</span> <span class="tag">theme amber</span> <span class="tag">theme mono</span> • Easter egg: <span class="tag">sudo hire-me</span></p>
+  </div>
 </body>
-
 </html>
