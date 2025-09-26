@@ -28,10 +28,9 @@
       ],
       projets: [
         {nom:'Teddy Blue — annonces pour parents d’enfants autistes', lien:'#', desc:'Full‑stack: Vue.js, Spring Boot, PostgreSQL, JUnit, Jest, Jenkins.'},
-        {nom:'Lia (WIP) — analyse de parties d’échecs', lien:'#', desc:'Vue.js, Vitest, Django, PostgreSQL, MistralAI.'},
         {nom:'Extension Chrome — chessProblems', lien:'#', desc:'Problèmes d\'échecs à chaque nouvel onglet, validation du coup.'},
         {nom:'Extension LinkedIn — inclusive_search', lien:'#', desc:'Recherche inclusive FR/PL pour l’IT (open source).'},
-        {nom:'Livre 3D interactif (Three.js)', lien:'#', desc:'Livre feuilletable 3D, textures et animation squelettique.'},
+        {nom:'REX (Three.js)', lien:'#', desc:'dinosaure 3D, textures et animation squelettique.'},
         {nom:'Mars Weather — mobile', lien:'#', desc:'App affichant la météo martienne (React Native).'}
       ],
       experience: [
