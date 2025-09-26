@@ -295,6 +295,7 @@
     };
 
     function HIRE_ME() {
+      window.open('https://dfrad1ytun997.cloudfront.net/uploads/videos/compiled-68cbcbabeff86.mp4', '_blank', 'noopener');
       const lines = [
         '[sudo] permission accordée.',
         'Exécution: onboarding.sh',
