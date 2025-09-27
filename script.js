@@ -1,5 +1,5 @@
  const CONFIG = {
-      ident: 'dev@stationf:~$',
+      ident: 'dev@ewa:~$',
       nom: 'Ewa Barbara Kadziolka',
       titre: 'Développeuse Full Stack • Testeuse Logiciel',
       email: 'kalistaewa@gmail.com',
