@@ -189,7 +189,7 @@
       cat(args) {
         args = args || [];
         const f = (args[0]||'').toLowerCase();
-        if (!f) return 'Utilisation: cat <fichier>\nEssayez: welcome.txt, skills.txt, experience.txt, education.txt, contact.txt, README.md';
+        if (!f) return 'Utilisation: cat <fichier>\nTapez: welcome.txt, skills.txt, experience.txt, education.txt, contact.txt, README.md';
         if (f.indexOf('welcome')>-1) return this.ascii();
         if (f.indexOf('skills')>-1) return this.skills();
         if (f.indexOf('experience')>-1) return this.experience();
@@ -393,7 +393,7 @@
       input.focus();
       await typeLine('Bienvenue, '+CONFIG.nom+'.');
       await typeLine("Tapez 'help' pour commencer.");
-      printRaw('<div class="muted">Astuce: essayez <span class="tag">whoami</span>, <span class="tag">projects</span>, <span class="tag">open github</span> ou <span class="tag">sudo hire-me</span>.</div>');
+      printRaw('<div class="muted">Astuce: tapez <span class="tag">whoami</span>, <span class="tag">projects</span>, <span class="tag">open github</span> ou <span class="tag">sudo hire-me</span>.</div>');
 
       // =============================
       // ✅ Auto-tests rapides
