@@ -4,7 +4,7 @@
       titre: 'Développeuse Full Stack • Testeuse Logiciel',
       email: 'kalistaewa@gmail.com',
       tel: '+33 7 53 43 13 12',
-      site: 'https://github.com/Deotyma',
+      site: 'https://deotyma.github.io',
       github: 'https://github.com/Deotyma',
       linkedin: 'https://www.linkedin.com/in/ewabarbarakadziolka',
       ville: 'Alfortville (94140), Île-de-France',
