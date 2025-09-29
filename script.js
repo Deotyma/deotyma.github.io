@@ -392,7 +392,8 @@ const CONFIG = {
     document.addEventListener('click', function(){ input.focus(); });
     window.addEventListener('load', async function() {
       input.focus();
-      await typeLine('Bienvenue, '+CONFIG.nom+'.');
+      await typeLine('Bienvenue sur mon portfolio');
+      await typeLine('Je suis, '+CONFIG.nom+', développeuse web.');
       await typeLine("Tapez 'help' pour commencer.");
       printRaw('<div class="muted">Astuce: tapez <span class="tag">whoami</span>, <span class="tag">projects</span>, <span class="tag">open github</span> ou <span class="tag">sudo hire-me</span>.</div>');
 
