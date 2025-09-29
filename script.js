@@ -1,4 +1,4 @@
- const CONFIG = {
+const CONFIG = {
       ident: 'dev@ewa:~$',
       nom: 'Ewa Barbara Kadziolka',
       titre: 'Développeuse Full Stack • Testeuse Logiciel',
@@ -177,13 +177,12 @@
       },
       contact() {
         const lines = [
-          'Email: '+CONFIG.email,
-          'Tél:   '+CONFIG.tel,
-          'Site:  '+CONFIG.site,
-          'GitHub: '+CONFIG.github,
-          'LinkedIn: '+CONFIG.linkedin
+          'Email: <a href="mailto:' + CONFIG.email + '">' + CONFIG.email + '</a>',
+          'Site: <a href="' + CONFIG.site + '" target="_blank" rel="noopener">' + CONFIG.site + '</a>',
+          'GitHub: <a href="' + CONFIG.github + '" target="_blank" rel="noopener">' + CONFIG.github + '</a>',
+          'LinkedIn: <a href="' + CONFIG.linkedin + '" target="_blank" rel="noopener">' + CONFIG.linkedin + '</a>'
         ];
-        return lines.join('\n');
+        return lines.join('<br>');
       },
       links() { return this.contact(); },
       cat(args) {
@@ -336,8 +335,11 @@
         const fn = COMMANDS[cmd];
         if (fn) {
           const out = fn.call(COMMANDS, args);
-          if (typeof out === 'string') {
-            printRaw('<div>'+escapeHtml(out).replace(/\n/g,'<br>')+'</div>');
+          // Detect commands that return HTML (contact, links)
+          if ((cmd === 'contact' || cmd === 'links') && typeof out === 'string') {
+            printRaw('<div>' + out + '</div>');
+          } else if (typeof out === 'string') {
+            printRaw('<div>' + escapeHtml(out).replace(/\n/g, '<br>') + '</div>');
           } else if (out instanceof Node) {
             terminal.appendChild(out);
             scrollToBottom();
@@ -366,7 +368,6 @@
         if (parts.length === 1) {
           input.value = complete(parts[0]);
         } else {
-          // auto-complétion pour 'open' et 'theme'
           const c = parts[0];
           const p = parts[1] || '';
           if (c === 'open') {
