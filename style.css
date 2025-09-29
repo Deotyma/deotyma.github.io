@@ -13,7 +13,7 @@
     }
     .container { max-width: 920px; margin: 0 auto; padding: 16px; }
 
-    #terminal { min-height: 80vh; white-space: pre-wrap; word-break: break-word; }
+    #terminal { white-space: pre-wrap; word-break: break-word; }
     .line { display: grid; grid-template-columns: auto 1fr; column-gap: 8px; align-items: baseline; }
     .prompt { color: var(--accent); }
     .input { width: 100%; background: transparent; border: 0; color: var(--fg); font: inherit; outline: none; caret-color: var(--accent); }
